@@ -4,10 +4,48 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "c03480cd6606d286d65f99d2ef7d5219",
-    "content-hash": "00dda2fe0c5e83b197c7362983e8298c",
+    "hash": "daa24a1a8087e4198a249de61c3b4eb9",
+    "content-hash": "69b5c5a0d7828e7a756a196b8ac1ce76",
     "packages": [],
     "packages-dev": [
+        {
+            "name": "cakedc/migrations",
+            "version": "dev-develop",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/CakeDC/migrations.git",
+                "reference": "353ed82350542a186538390997d31b28ccc416d7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/CakeDC/migrations/zipball/353ed82350542a186538390997d31b28ccc416d7",
+                "reference": "353ed82350542a186538390997d31b28ccc416d7",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "*",
+                "php": ">=5.2.8"
+            },
+            "type": "cakephp-plugin",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Cake Development Corporation",
+                    "email": "team@cakedc.com",
+                    "homepage": "http://cakedc.com"
+                }
+            ],
+            "description": "Migrations Plugin for CakePHP",
+            "homepage": "http://cakedc.com",
+            "keywords": [
+                "cakephp",
+                "migrations"
+            ],
+            "time": "2016-03-01 12:40:15"
+        },
         {
             "name": "cakephp/cakephp-codesniffer",
             "version": "1.0.0",
@@ -683,7 +721,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "cakedc/migrations": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
