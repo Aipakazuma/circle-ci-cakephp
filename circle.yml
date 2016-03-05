@@ -20,4 +20,4 @@ dependencies:
     - cd ~/circle-ci-cakephp/app/ && composer install
 test:
   override:
-    - php ~/circle-ci-cakephp/app/Console/cake.php test app AllTests
+    - cd ~/circle-ci-cakephp/app/ && ./Console/cake.php test app AllTests
