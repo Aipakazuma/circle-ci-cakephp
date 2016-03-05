@@ -4,7 +4,6 @@ machine:
 dependencies:
   pre:
     - chmod -R 777 ~/circle-ci-cakephp/app/tmp
-    - mysql -u ubuntu -e "create database circle_test"
   post:
     - echo "<?php
         class DATABASE_CONFIG {
@@ -18,6 +17,7 @@ dependencies:
           'prefix' => ''
         );
         }" > ~/circle-ci-cakephp/app/Config/database.php
+    - ~/circle-ci-cakephp/app/Console/cake Migrations.migration run all
 test:
   override:
     - php ~/circle-ci-cakephp/app/Console/cake.php test app AllTest
