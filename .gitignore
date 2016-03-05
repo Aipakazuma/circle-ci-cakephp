@@ -1,13 +1,8 @@
-# CakePHP 3
-
-/vendor/*
-/config/app.php
-/tmp/*
-/logs/*
-
 # CakePHP 2
 
-/app/tmp/*
+/app/tmp/models/*
+/app/tmp/persisten/*
+/app/tmp/views/*
 /app/Config/core.php
 /app/Config/database.php
 /vendors/*
