@@ -1,0 +1,23 @@
+machine:
+  php:
+    version: 5.5.11
+dependencies:
+  pre:
+    - chmod -R 777 ~/app/tmp
+    - mysql -u ubuntu -e "create database circle_test"
+  post:
+    - echo "<?php
+        class DATABASE_CONFIG {
+        public \$test = array(
+          'datasource' => 'Database/Mysql',
+          'persistent' => false,
+          'host' => '127.0.0.1',
+          'login' => 'ubuntu',
+          'password' => '',
+          'database' => 'circle_test',
+          'prefix' => ''
+        );
+        }" > ~/app/Config/database.php
+test:
+  override:
+    - php ./app/Console/cake.php test app AllTest
