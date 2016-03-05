@@ -17,7 +17,7 @@ dependencies:
           'prefix' => ''
         );
         }" > ~/circle-ci-cakephp/app/Config/database.php
-    - ~/circle-ci-cakephp/app/Console/cake Migrations.migration run all
+    - cd ~/circle-ci-cakephp/app/ && composer install
 test:
   override:
-    - php ~/circle-ci-cakephp/app/Console/cake.php test app AllTest
+    - php ~/circle-ci-cakephp/app/Console/cake.php test app AllTests
