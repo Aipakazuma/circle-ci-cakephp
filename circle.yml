@@ -3,7 +3,7 @@ machine:
     version: 5.5.11
 dependencies:
   pre:
-    - chmod -R 777 ~/app/tmp
+    - chmod -R 777 ~/circle-ci-cakephp/app/tmp
     - mysql -u ubuntu -e "create database circle_test"
   post:
     - echo "<?php
@@ -17,7 +17,7 @@ dependencies:
           'database' => 'circle_test',
           'prefix' => ''
         );
-        }" > ~/app/Config/database.php
+        }" > ~/circle-ci-cakephp/app/Config/database.php
 test:
   override:
-    - php ./app/Console/cake.php test app AllTest
+    - php ~/circle-ci-cakephp/app/Console/cake.php test app AllTest
